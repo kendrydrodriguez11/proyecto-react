@@ -1,14 +1,181 @@
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+.register-container {
+  min-height: 100vh;
   background-color: #f0f2f5;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.formulario-registro {
-  width: 380px;
-  margin: 120px auto;
+.register-header {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.register-header-content {
+  flex: 1;
+}
+
+.register-logo {
+  font-size: 32px;
+  color: #1877f2;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 10px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.register-header-text {
+  font-size: 24px;
+  color: #424242;
+  margin: 0;
+  font-weight: 400;
+}
+
+.register-close-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #ccc;
+  cursor: pointer;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.register-close-btn:hover {
+  background-color: #e4e6eb;
+}
+
+.register-form {
   background: white;
-  padding: 25px;
+  padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.form-row > div {
+  flex: 1;
+}
+
+.form-row input {
+  width: 100% !important;
+}
+
+.register-form input,
+.register-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #f0f2f5;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  color: #000;
+}
+
+.register-form input::placeholder,
+.register-form select {
+  color: #65676b;
+}
+
+.register-form input:focus,
+.register-form select:focus {
+  outline: none;
+  background-color: #fff;
+  border-color: #1877f2;
+}
+
+.form-section-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #65676b;
+  margin-top: 15px;
+  margin-bottom: 8px;
+}
+
+.date-inputs {
+  margin-bottom: 10px;
+}
+
+.date-select {
+  flex: 1;
+  margin-right: 5px !important;
+}
+
+.date-select:last-child {
+  margin-right: 0 !important;
+}
+
+.gender-options {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.gender-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #65676b;
+  cursor: pointer;
+}
+
+.gender-label input[type='radio'] {
+  width: auto;
+  margin: 0;
+  cursor: pointer;
+}
+
+.register-submit-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #31a24c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.register-submit-btn:hover {
+  background-color: #2d933f;
+}
+
+@media (max-width: 768px) {
+  .register-form {
+    padding: 15px;
+  }
+
+  .register-logo {
+    font-size: 24px;
+  }
+
+  .register-header-text {
+    font-size: 18px;
+  }
 }

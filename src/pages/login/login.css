@@ -1,14 +1,145 @@
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+.login-container {
+  display: flex;
+  height: 100vh;
   background-color: #f0f2f5;
 }
 
-.formulario-login {
-  width: 380px;
-  margin: 120px auto;
+.login-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.facebook-logo {
+  font-size: 60px;
+  color: #1877f2;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.facebook-subtitle {
+  font-size: 28px;
+  color: #424242;
+  margin: 0;
+  line-height: 1.2;
+  max-width: 400px;
+  font-weight: 400;
+}
+
+.login-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-form {
   background: white;
-  padding: 25px;
+  padding: 30px;
   border-radius: 8px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 380px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #f0f2f5;
+  box-sizing: border-box;
+  color: #000;
+}
+
+.login-form input::placeholder {
+  color: #65676b;
+}
+
+.login-form input:focus {
+  outline: none;
+  background-color: #fff;
+  border-color: #1877f2;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #1877f2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.login-btn:hover {
+  background-color: #165ec7;
+}
+
+.login-divider {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.login-divider span {
+  color: #1877f2;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.login-divider span:hover {
+  text-decoration: underline;
+}
+
+.register-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #31a24c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.register-btn:hover {
+  background-color: #2d933f;
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+  }
+
+  .login-left {
+    justify-content: flex-start;
+    padding-top: 40px;
+  }
+
+  .facebook-logo {
+    font-size: 40px;
+  }
+
+  .facebook-subtitle {
+    font-size: 20px;
+  }
+
+  .login-form {
+    margin-top: 20px;
+  }
 }
